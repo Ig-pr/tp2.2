@@ -163,12 +163,12 @@ int compara_r(struct racional r1, struct racional r2)
     return -2;
 
   float a1, a2;
-  a1 = r1.num / r1.den;
-  a2 = r2.num / r2.den;
+  a1 = (float)r1.num / r1.den;
+  a2 = (float)r2.num / r2.den;
 
-  if (a1 > a2)
+  if (a1 < a2)
     return -1;
-  if (a2 > a1)
+  if (a2 < a1)
     return 1;
   return 0;
 }
